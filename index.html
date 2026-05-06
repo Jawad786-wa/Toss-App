@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Toss App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 80px;
+        }
+
+        #result {
+            font-size: 40px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Coin Toss 🪙</h1>
+
+    <div id="result">Click to toss</div>
+
+    <button onclick="tossCoin()">Toss Coin</button>
+
+    <script>
+        function tossCoin() {
+            // Random number: 0 or 1
+            let random = Math.floor(Math.random() * 2);
+
+            let resultText;
+
+            if (random === 0) {
+                resultText = "Head";
+            } else {
+                resultText = "Tail";
+            }
+
+            // Display result
+            document.getElementById("result").innerText = resultText;
+        }
+    </script>
+
+</body>
+</html>
